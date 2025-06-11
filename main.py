@@ -1,9 +1,6 @@
 import os
 import json
 import cv2
-from segment_anything import sam_model_registry, SamPredictor
-import torch
-import requests
 
 from PIL import Image
 
