@@ -10,6 +10,12 @@ import streamlit as st
 
 import google.generativeai as genai
 
+import requests
+
+url = "https://drive.google.com/file/d/1W_6W0CNgW-2B4TcxA5nWjkwpLLs4eECj/view?usp=drive_link"
+r = requests.get(url)
+with open("trained_model/NewDataset.h5", "wb") as f:
+    f.write(r.content)
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
 print (working_dir,"Directory is working")
@@ -204,4 +210,3 @@ if uploaded_image is not None:
                 st.info(f'Recommended Remedy:\n {remedy}')
             else:
                 st.error("The cropped image is not a tomato leaf image.")
-
