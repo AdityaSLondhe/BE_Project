@@ -25,9 +25,10 @@ if not os.path.exists(model_path):
     gdown.download(gdown_url, model_path, quiet=False)
 
 
-working_dir = os.path.dirname(os.path.abspath(__file__))
-print (working_dir,"Directory is working")
-model_path = working_dir + r'\trained_model\NewDataset.h5'
+# working_dir = os.path.dirname(os.path.abspath(__file__))
+# print (working_dir,"Directory is working")
+# model_path = working_dir + r'\trained_model\NewDataset.h5'
+
 print(model_path)
 print(working_dir, " Working DIR")
 
