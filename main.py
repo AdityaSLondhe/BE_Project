@@ -30,7 +30,7 @@ if not os.path.exists(model_path):
 # model_path = working_dir + r'\trained_model\NewDataset.h5'
 
 print(model_path)
-print(working_dir, " Working DIR")
+# print(working_dir, " Working DIR")
 
 # Load the pre-trained model with error handling
 try:
@@ -41,7 +41,8 @@ except Exception as e:
     st.stop()
 
 # loading the class names
-class_indices = json.load(open(f"{working_dir}/class_indices.json"))
+# class_indices = json.load(open(f"{working_dir}/class_indices.json"))
+class_indices = json.load(open("/class_indices.json"))
 
 # Function detect largest leaf then crop it and removes background
 def detect_and_crop_leaf(image: Image.Image):
