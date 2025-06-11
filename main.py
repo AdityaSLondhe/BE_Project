@@ -12,14 +12,15 @@ import google.generativeai as genai
 
 import requests
 
-url = "https://drive.google.com/file/d/1W_6W0CNgW-2B4TcxA5nWjkwpLLs4eECj/view?usp=drive_link"
+import gdown
 
-os.makedirs("trained_model", exist_ok=True)
+file_id = "1W_6W0CNgW-2B4TcxA5nWjkwpLLs4eECj"
+gdown_url = f"https://drive.google.com/uc?id={file_id}"
+model_path = "trained_model/NewDataset.h5"
 
-r = requests.get(url)
+if not os.path.exists(model_path):
+    gdown.download(gdown_url, model_path, quiet=False)
 
-with open("trained_model/NewDataset.h5", "wb") as f:
-    f.write(r.content)
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
 print (working_dir,"Directory is working")

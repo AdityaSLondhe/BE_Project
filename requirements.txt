@@ -4,3 +4,5 @@ streamlit==1.30.0
 google-generativeai
 opencv-python
 opencv-python-headless
+gdown
+
