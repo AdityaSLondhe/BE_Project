@@ -13,7 +13,11 @@ import google.generativeai as genai
 import requests
 
 url = "https://drive.google.com/file/d/1W_6W0CNgW-2B4TcxA5nWjkwpLLs4eECj/view?usp=drive_link"
+
+os.makedirs("trained_model", exist_ok=True)
+
 r = requests.get(url)
+
 with open("trained_model/NewDataset.h5", "wb") as f:
     f.write(r.content)
 
