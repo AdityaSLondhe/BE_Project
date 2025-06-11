@@ -18,6 +18,8 @@ file_id = "1W_6W0CNgW-2B4TcxA5nWjkwpLLs4eECj"
 gdown_url = f"https://drive.google.com/uc?id={file_id}"
 model_path = "trained_model/NewDataset.h5"
 
+os.makedirs(model_dir, exist_ok=True)
+
 if not os.path.exists(model_path):
     gdown.download(gdown_url, model_path, quiet=False)
 
