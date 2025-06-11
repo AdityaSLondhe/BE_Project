@@ -42,7 +42,7 @@ except Exception as e:
 
 # loading the class names
 # class_indices = json.load(open(f"{working_dir}/class_indices.json"))
-class_indices = json.load(open("/class_indices.json"))
+class_indices = json.load(open("/mount/src/be_project/class_indices.json"))
 
 # Function detect largest leaf then crop it and removes background
 def detect_and_crop_leaf(image: Image.Image):
